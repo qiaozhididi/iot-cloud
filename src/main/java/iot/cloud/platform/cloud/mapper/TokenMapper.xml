@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="iot.cloud.platform.cloud.mapper.TokenMapper">
+    <select id="getTokenByUserId" resultType="iot.cloud.platform.cloud.entity.TokenEntity">
+        <!-- 请完成SQL语句 -->
+        SELECT * FROM token WHERE user_id = #{userId}
+    </select>
+
+    <select id="getToken" resultType="iot.cloud.platform.cloud.entity.TokenEntity">
+        <!-- 请完成SQL语句 -->
+        SELECT * FROM token WHERE token = #{token}
+    </select>
+
+    <insert id="saveToken" parameterType="iot.cloud.platform.cloud.entity.TokenEntity">
+        <!-- 请完成SQL语句 -->
+        INSERT INTO token (token, user_id, expired_time,expired_ts) VALUES (#{token}, #{userId}, #{expiredTime},
+        #{expiredTs})
+    </insert>
+
+    <update id="updateToken" parameterType="iot.cloud.platform.cloud.entity.TokenEntity">
+        <!-- 请完成SQL语句 -->
+        UPDATE token SET token = #{token}, expired_time = #{expiredTime} WHERE user_id = #{userId}
+    </update>
+</mapper>
