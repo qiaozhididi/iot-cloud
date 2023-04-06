@@ -12,7 +12,7 @@ public interface UserMapper {
      * @param userId
      * @return
      */
-    UserEntity getUserById(@Param("user_id") String userId);
+    UserEntity getUserById(@Param("userId") String userId);
 
     /**
      * 根据用户ID或用户名获取用户信息

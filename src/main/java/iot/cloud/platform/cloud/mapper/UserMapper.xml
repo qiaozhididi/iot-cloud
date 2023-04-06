@@ -3,7 +3,7 @@
 <mapper namespace="iot.cloud.platform.cloud.mapper.UserMapper">
     <select id="getUserById" resultType="iot.cloud.platform.cloud.entity.UserEntity">
         <!-- 请补充 SQL 语句 -->
-        SELECT * FROM user WHERE user_id = #{user_id}
+        SELECT * FROM user WHERE user_id = #{userId}
     </select>
     <select id="getUserByIdOrName" resultType="iot.cloud.platform.cloud.entity.UserEntity">
         <!-- 请补充 SQL 语句 -->
